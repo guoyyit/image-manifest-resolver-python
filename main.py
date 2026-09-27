@@ -1,8 +1,5 @@
-from fastapi import FastAPI
+"""ASGI entry point: ``uv run uvicorn main:app``."""
 
-app = FastAPI()
+from image_resolver.service import app
 
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+__all__ = ["app"]
