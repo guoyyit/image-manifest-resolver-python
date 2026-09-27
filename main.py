@@ -1,8 +1,5 @@
-from fastapi import FastAPI
+"""Service entrypoint: ``uvicorn main:app`` or ``uv run fastapi dev``."""
 
-app = FastAPI()
+from imr.api import create_app
 
-
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+app = create_app()
